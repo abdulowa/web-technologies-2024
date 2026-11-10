@@ -1,64 +1,295 @@
+Index · HTML
 <!DOCTYPE html>
 <html lang="ru">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мопсы</title>
+    <title>IT Website</title>
     <link rel="stylesheet" href="/src/assets/styles/style.css">
 </head>
-
+ 
 <body>
-    <header>
-        <nav aria-label="Навигация">
-            <ul class="breadcrumbs">
-                <li><a href="index.html">Главная</a></li>
+    <header class="header">
+        <a class="logo" href="index.html">IT WEBSITE</a>
+ 
+        <nav class="menu">
+            <ul class="menu-list">
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#projects">Кейсы</a></li>
+                <li><a href="#team">Команда</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
-
-        <img src="images/111.jpg" alt="Мопс" width="100">
-    </header>
-
-    <main>
-        <h1 class="heading-1">Мопсы наши друзья</h1>
-
-        <p class="text">Мопсы маленькие, добрые и смешные собаки.</p>
-
-        <h3 class="heading-3">Характер мопсов</h3>
-
-        <h4 class="heading-4">Почему я люблю мопсов</h4>
-
-        <p class="text">
-            Они любят играть, гулять и проводить время рядом с человеком.
-        </p>
-
-        <h3 class="heading-3">Уход за мопсом</h3>
-
-        <p class="text italic">
-            Мопсу нужны прогулки, вода и забота каждый день.
-        </p>
-    </main>
-
-    <hr>
-
-    <footer>
-        <h3 class="heading-3">Наши контакты</h3>
-
-        <p class="text">Здесь можно узнать больше о мопсах.</p>
-
-        <hr>
-
-        <ul>
-            <li>Связаться с нами</li>
-            <li>+7 999 999 99 99</li>
-            <li>
-                <a href="mailto:pochta1@mail.com">pochta1@mail.com</a>
-            </li>
+ 
+        <ul class="header-contacts">
+            <li>+7 (111) 111 11 11</li>
+            <li>+7 (111) 111 11 12</li>
+            <li><a href="mailto:itcompany@mail.com">itcompany@mail.com</a></li>
         </ul>
-
-        <p class="text">Все права защищены</p>
+    </header>
+ 
+    <hr>
+ 
+    <main>
+        <section class="main-screen">
+            <div class="main-screen-text">
+                <h1 class="heading-1">Разработка мобильных приложений и веб-сервисов любой сложности</h1>
+                <p class="text">Мы создаём приложения для iOS и Android, которые переносят ваш бизнес в телефоны ваших
+                    клиентов.</p>
+            </div>
+ 
+            <form class="call-form" action="#" method="post">
+                <h2 class="heading-2">Оставьте контакты, и мы перезвоним вам через 30 минут</h2>
+ 
+                <p class="text">
+                    <label for="call-phone">Номер телефона</label><br>
+                    <input class="form-input" type="tel" id="call-phone" name="phone" placeholder="+7 (111) 111-11-11">
+                </p>
+ 
+                <p class="text">
+                    <label for="call-name">Имя</label><br>
+                    <input class="form-input" type="text" id="call-name" name="full_name" placeholder="Иван Иванов">
+                </p>
+ 
+                <button class="submit-button" type="submit">Получить консультацию</button>
+            </form>
+ 
+            <img src="images/applications.jpg" alt="Приложения на телефоне" width="300">
+        </section>
+ 
+        <hr>
+ 
+        <section class="services" id="services">
+            <div class="services-text">
+                <h2 class="heading-2">Полный цикл разработки</h2>
+                <p class="text">Мы используем проверенные технологии</p>
+ 
+                <h3 class="heading-3">Web</h3>
+                <p class="text">PHP / JavaScript / Node.JS / Vue.js / MySQL / Laravel / Python</p>
+ 
+                <h3 class="heading-3">Mobile</h3>
+                <p class="text">Swift / Kotlin / Firebase / CoreData / Room / RxJava / Unit Test</p>
+            </div>
+ 
+            <ul class="services-list">
+                <li>iOS разработка</li>
+                <li>Android разработка</li>
+                <li>Веб-разработка</li>
+                <li>UI/UX дизайн</li>
+                <li>Тестирование</li>
+                <li>Запуск</li>
+                <li>IT-консалтинг</li>
+            </ul>
+        </section>
+ 
+        <hr>
+ 
+        <section class="industries">
+            <h2 class="heading-2">Сделали больше 100 проектов в 15 сферах</h2>
+ 
+            <ul class="industries-list">
+                <li>Социальные сети</li>
+                <li>Фитнес и спорт</li>
+                <li>Банки</li>
+                <li>Строительство</li>
+                <li>Игры</li>
+                <li>Образование</li>
+                <li>Авто и транспорт</li>
+                <li>Медицина</li>
+                <li>Доставка еды</li>
+                <li>Маркетплейсы</li>
+                <li>AR технологии</li>
+                <li>Сериалы</li>
+                <li>Стартапы</li>
+                <li>Религия</li>
+                <li>Онлайн-курсы</li>
+            </ul>
+        </section>
+ 
+        <hr>
+ 
+        <section class="projects" id="projects">
+            <h2 class="heading-2">Проекты, которыми мы гордимся</h2>
+            <p class="text">Мы гордимся нашими клиентами и любим работать с ними долго.</p>
+ 
+            <div class="projects-menu">
+                <ul class="projects-names">
+                    <li>I-teka</li>
+                    <li>Dauletten</li>
+                    <li>Guru Bosch</li>
+                    <li>Santo</li>
+                    <li>Home Credit Bank</li>
+                    <li>BI Partners</li>
+                    <li>Europharma</li>
+                </ul>
+ 
+                <button type="button">Смотреть ещё 100 проектов</button>
+            </div>
+ 
+            <article class="project-card">
+                <h3 class="heading-3">I-teka</h3>
+                <p class="text">Приложение для поиска лекарств в аптеках города. Во время карантина оно помогло многим
+                    людям.</p>
+                <p class="text italic">Анализ / iOS / Android / Тестирование / Дизайн</p>
+ 
+                <ul class="project-info">
+                    <li>Казахстан</li>
+                    <li>Медицина</li>
+                    <li>400% рост пользователей</li>
+                    <li>+200 000 активных пользователей</li>
+                </ul>
+ 
+                <p class="text">Скачать в App Store и Google Play</p>
+ 
+                <img src="images/project.jpg" alt="Приложение I-teka" width="300">
+            </article>
+        </section>
+ 
+        <hr>
+ 
+        <section class="discuss">
+            <div class="discuss-text">
+                <h2 class="heading-2">Давайте обсудим ваш проект</h2>
+                <p class="text">Расскажем, как сделать хорошее приложение, сколько это стоит и сколько займёт времени.</p>
+            </div>
+ 
+            <form class="discuss-form" action="#" method="post">
+                <p class="text">
+                    <label for="discuss-phone">Номер телефона</label><br>
+                    <input class="form-input" type="tel" id="discuss-phone" name="phone" placeholder="+7 (702) 517-11-98">
+                </p>
+ 
+                <p class="text">
+                    <label for="discuss-name">Имя</label><br>
+                    <input class="form-input" type="text" id="discuss-name" name="full_name" placeholder="Иван Иванов">
+                </p>
+ 
+                <button class="submit-button" type="submit">Обсудить проект</button>
+            </form>
+        </section>
+ 
+        <hr>
+ 
+        <section class="stages">
+            <h2 class="heading-2">Этапы разработки приложения</h2>
+ 
+            <ol class="stages-list">
+                <li>
+                    <h3 class="heading-3">Анализ</h3>
+                    <p class="text">Пишем техническое задание и изучаем, что нужно заказчику.</p>
+                </li>
+                <li>
+                    <h3 class="heading-3">Дизайн</h3>
+                    <p class="text">Рисуем удобный и понятный интерфейс.</p>
+                </li>
+                <li>
+                    <h3 class="heading-3">Разработка</h3>
+                    <p class="text">Пишем чистый и стабильный код.</p>
+                </li>
+                <li>
+                    <h3 class="heading-3">Тестирование</h3>
+                    <p class="text">Проверяем приложение и исправляем ошибки.</p>
+                </li>
+                <li>
+                    <h3 class="heading-3">Запуск</h3>
+                    <p class="text">Публикуем приложение в App Store и Google Play.</p>
+                </li>
+                <li>
+                    <h3 class="heading-3">Поддержка</h3>
+                    <p class="text">Следим за работой приложения и обновляем его.</p>
+                </li>
+            </ol>
+        </section>
+ 
+        <hr>
+ 
+        <section class="team" id="team">
+            <div class="team-text">
+                <h2 class="heading-2">Наша команда</h2>
+                <p class="text">Мы делаем аналитику, дизайн, сайты и мобильные приложения.</p>
+ 
+                <ul class="team-numbers">
+                    <li>28 человек в команде</li>
+                    <li>+100 проектов</li>
+                    <li>7 лет в IT</li>
+                </ul>
+ 
+                <p class="text">У нас работают все нужные специалисты: от дизайнера до тестировщика.</p>
+            </div>
+ 
+            <img src="images/team.jpg" alt="Наша команда" width="300">
+        </section>
+ 
+        <hr>
+ 
+        <section class="book">
+            <h2 class="heading-2">Получите книгу бесплатно, оставив свои контакты</h2>
+ 
+            <form class="book-form" action="#" method="post">
+                <p class="text">
+                    <label for="book-phone">Номер телефона</label><br>
+                    <input class="form-input" type="tel" id="book-phone" name="phone" placeholder="+7 (111) 111-11-11">
+                </p>
+ 
+                <p class="text">
+                    <label for="book-name">Имя</label><br>
+                    <input class="form-input" type="text" id="book-name" name="full_name">
+                </p>
+ 
+                <p class="text">
+                    <label for="book-email">Email</label><br>
+                    <input class="form-input" type="email" id="book-email" name="email" placeholder="mail@mail.com">
+                </p>
+ 
+                <button class="submit-button" type="submit">Отправить книгу на почту</button>
+            </form>
+ 
+            <img src="images/book.jpg" alt="Книга" width="180">
+        </section>
+ 
+        <hr>
+ 
+        <section class="faq" id="faq">
+            <h2 class="heading-2">FAQ</h2>
+ 
+            <div class="faq-questions">
+                <h3 class="heading-3">Сколько стоит мобильное приложение?</h3>
+                <p class="text">Цена зависит от функций, платформ и сложности дизайна.</p>
+ 
+                <h3 class="heading-3">Даёте ли вы гарантию?</h3>
+                <p class="text">Да, после запуска мы бесплатно исправляем ошибки.</p>
+ 
+                <h3 class="heading-3">Сколько длится разработка?</h3>
+                <ul>
+                    <li>Средние проекты — до 3 месяцев</li>
+                    <li>Большие проекты — 4–6 месяцев</li>
+                </ul>
+ 
+                <h3 class="heading-3">Вы сохраните мою идею в секрете?</h3>
+                <p class="text">Да, мы подписываем договор о конфиденциальности.</p>
+            </div>
+        </section>
+    </main>
+ 
+    <hr>
+ 
+    <footer class="footer">
+        <h2 class="heading-2">IT WEBSITE</h2>
+ 
+        <div class="footer-contacts">
+            <ul>
+                <li>Телефон: +7 (778) 395 90 26</li>
+                <li>Почта: <a href="mailto:mail@mail.com">mail@mail.com</a></li>
+                <li>Адрес: город, улица, д. 90</li>
+                <li><a href="contacts.html">Оставить заявку</a></li>
+            </ul>
+        </div>
+ 
+        <p class="text">Мы работаем по всему миру</p>
     </footer>
 </body>
-
+ 
 </html>
+ 
