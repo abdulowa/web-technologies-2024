@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Website</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/assets/styles/style.css">
 </head>
  
 <body>
     <header class="header">
-        <a class="logo" href="index.html">IT WEBSITE</a>
+        <a class="logo" href="index.html">THOUSAND</a>
  
         <nav class="menu">
             <ul class="menu-list">
@@ -23,9 +25,9 @@
         </nav>
  
         <address class="header-contacts">
-            <p><a href="tel:+71111111111">+7 (111) 111 11 11</a></p>
-            <p><a href="tel:+71111111111">+7 (111) 111 11 11</a></p>
-            <p><a href="mailto:itcompany@mail.com">itcompany@mail.com</a></p>
+            <p><a href="tel:+77072548147">+7 (707) 254 81 47</a></p>
+            <p><a href="tel:+77783959026">+7 (778) 395 90 26</a></p>
+            <p><a href="mailto:thousanditcompany@gmail.com">thousanditcompany@gmail.com</a></p>
         </address>
     </header>
  
@@ -34,7 +36,8 @@
     <main>
         <section class="main-screen">
             <div class="main-screen-text">
-                <h1 class="heading-1">Development of mobile applications and web services of any complexity</h1>
+                <h1 class="heading-1">Development of <span class="accent">mobile applications</span> and <span
+                        class="accent">web services</span> of any complexity</h1>
                 <p class="text">We create mobile applications for iOS, Android that transfer your business to mobile
                     applications of your customers' devices</p>
             </div>
@@ -44,18 +47,18 @@
  
                 <p class="text">
                     <label for="call-phone">Phone number</label><br>
-                    <input class="form-input" type="tel" id="call-phone" name="phone" placeholder="+7 (111) 111-11-11">
+                    <input class="form-input" type="tel" id="call-phone" name="phone" placeholder="+7 (799) 999-99-99">
                 </p>
  
                 <p class="text">
                     <label for="call-name">Full name</label><br>
-                    <input class="form-input" type="text" id="call-name" name="full_name" placeholder="Иван Иванов">
+                    <input class="form-input" type="text" id="call-name" name="full_name" placeholder="Анатолий">
                 </p>
  
                 <button class="submit-button" type="submit">Get consultation</button>
             </form>
  
-            <img src="images/applications.jpg" alt="Mobile applications" width="300">
+            <img src="images/applications.png" alt="Mobile applications" width="300">
         </section>
  
         <hr>
@@ -236,7 +239,7 @@
                     the best specialists in the market. It's expensive but worth it</p>
             </div>
  
-            <img src="images/team.jpg" alt="Our team" width="300">
+            <img src="images/team.png" alt="Our team" width="300">
         </section>
  
         <hr>
@@ -300,25 +303,31 @@
     <hr>
  
     <footer class="footer" id="contacts">
-        <h2 class="heading-2">IT WEBSITE</h2>
+        <h2 class="footer-title">IT WEBSITE</h2>
  
-        <address class="footer-contacts">
-            <p>Contact nums</p>
-            <p><a href="tel:+77783959026">+7 (778) 395 90 26</a></p>
+        <div class="footer-content">
+            <div class="footer-item">
+                <p class="footer-label">Contact nums</p>
+                <a href="tel:+77783959026">+7 (778) 395 90 26</a>
+            </div>
  
-            <p>Post</p>
-            <p><a href="mailto:mail@mail.com">mail@mail.com</a></p>
+            <div class="footer-item">
+                <p class="footer-label">Post</p>
+                <a href="mailto:mail@mail.com">mail@mail.com</a>
+            </div>
  
-            <p>Adress</p>
-            <p>City city, steet st. 90</p>
-        </address>
+            <div class="footer-item">
+                <p class="footer-label">Adress</p>
+                <p>City city, steet st. 90</p>
+            </div>
  
-        <div class="footer-request">
-            <p class="text">Leave a request</p>
-            <a href="#discuss">Leave a request</a>
+            <div class="footer-item">
+                <p class="footer-label">Leave a request</p>
+                <a href="#discuss">Leave a request</a>
+            </div>
         </div>
  
-        <p class="text">We work throughout world</p>
+        <p class="footer-text">We work throughout world</p>
     </footer>
 </body>
  
