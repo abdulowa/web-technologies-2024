@@ -8,7 +8,6 @@ body {
     color: #1b1b1f;
     background-color: #ffffff;
  
-    /* чтобы footer был прижат к низу страницы */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,7 +27,6 @@ hr {
     margin: 0 100px;
 }
  
-/* линию сразу под шапкой прячем, она не нужна */
 .header + hr {
     display: none;
 }
@@ -59,10 +57,8 @@ hr {
     color: #1a73e8;
 }
  
-/* ===================== HEADER ===================== */
  
 .header {
-    /* закрепляем шапку сверху */
     position: fixed;
     top: 20px;
     left: 100px;
@@ -109,7 +105,7 @@ hr {
 .header-contacts {
     display: flex;
     gap: 20px;
-    margin-left: auto; /* прижимаем контакты вправо */
+    margin-left: auto; 
     font-style: normal;
 }
  
@@ -123,26 +119,25 @@ hr {
     text-decoration: none;
 }
  
-/* ===================== ПЕРВЫЙ ЭКРАН ===================== */
  
 .main-screen {
     display: grid;
     grid-template-columns: 590px 1fr;
-    grid-template-rows: auto 1fr; /* текст по высоте содержимого, форма забирает остальное */
+    grid-template-rows: auto 1fr;
     grid-template-areas:
         "text  image"
         "form  image";
     column-gap: 40px;
     align-items: start;
  
-    padding: 100px 0 60px 100px;
+    padding: 0px 0 60px 100px;
     background-color: #f2f4f8;
     overflow: hidden;
 }
  
 .main-screen-text {
     grid-area: text;
-    padding-top: 0px;
+    padding-top: 160px;
 }
  
 .main-screen-text .heading-1 {
@@ -163,7 +158,6 @@ hr {
     justify-self: end;
 }
  
-/* форма обратного звонка */
 .call-form {
     grid-area: form;
     align-self: start;
@@ -227,8 +221,7 @@ hr {
     background-color: #155ec2;
 }
  
-/* ===================== FOOTER ===================== */
- 
+
 .footer {
     margin: 40px 100px 20px;
     padding: 30px 40px;
