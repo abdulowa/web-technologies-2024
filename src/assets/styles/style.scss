@@ -60,7 +60,6 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     color: $color-text;
     background-color: $color-white;
- 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -120,13 +119,11 @@ hr {
  
 .header {
     @include white-card;
- 
     position: fixed;
     top: 20px;
     left: $side;
     right: $side;
     z-index: 100;
- 
     display: flex;
     align-items: center;
     gap: 70px;
@@ -254,7 +251,6 @@ hr {
         "form  image";
     column-gap: 40px;
     align-items: start;
- 
     padding: 0 0 0 $side;
     background-color: $color-bg-gray;
     overflow: hidden;
@@ -353,11 +349,9 @@ hr {
     top: -150px;
     left: -60px;
     right: 0;
- 
     display: flex;
     gap: 24px;
     align-items: flex-start;
- 
     transform: rotate(-12deg);
     transform-origin: top center;
  
@@ -408,10 +402,8 @@ hr {
  
 .call-form {
     @include white-card;
- 
     grid-area: form;
     align-self: start;
- 
     display: grid;
     grid-template-columns: 1fr 1fr 115px;
     gap: 20px;
@@ -552,6 +544,10 @@ hr {
         margin-top: 24px;
         font-size: 16px;
     }
+ 
+    .slash {
+        color: $color-blue;
+    }
 }
  
 .services-list {
@@ -606,9 +602,7 @@ hr {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding: 20px;
-    border: 1px solid $color-footer-border;
-    border-radius: 12px;
+    padding: 20px 0;
     text-align: left;
  
     @include mobile {
@@ -626,9 +620,17 @@ hr {
     }
  
     .footer-label {
-        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
         font-size: 12px;
         color: $color-gray-light;
+ 
+        img {
+            width: 18px;
+            height: 18px;
+        }
     }
  
     a {
@@ -642,7 +644,664 @@ hr {
 }
  
 .footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin: 20px 0 0;
     font-size: 13px;
     color: $color-gray-light;
+ 
+    img {
+        height: 16px;
+        width: auto;
+    }
 }
+ 
+$color-blue-light: #e8f0fe;
+$color-stage-number: #f3f5fb;
+$color-white-muted: rgba(255, 255, 255, 0.8);
+ 
+@mixin section-padding {
+    padding: 60px $side;
+ 
+    @include tablet {
+        padding: 60px 20px;
+    }
+ 
+    @include mobile {
+        padding: 40px 20px;
+    }
+ 
+    @include small-mobile {
+        padding: 30px 15px;
+    }
+}
+ 
+$noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
+ 
+@mixin blue-section {
+    background-color: $color-blue;
+    background-image: $noise;
+    color: $color-white;
+}
+ 
+@mixin bg-text($text) {
+    &::before {
+        content: $text;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 220px;
+        font-weight: 800;
+        white-space: nowrap;
+        color: rgba(255, 255, 255, 0.04);
+        pointer-events: none;
+ 
+        @include mobile {
+            font-size: 110px;
+        }
+    }
+ 
+    & > * {
+        position: relative;
+        z-index: 1;
+    }
+}
+ 
+.industries {
+    background-color: $color-bg-gray;
+    @include section-padding;
+ 
+    .heading-2 {
+        font-size: 34px;
+        line-height: 1.3;
+        margin-bottom: 30px;
+ 
+        @include tablet {
+            font-size: 30px;
+        }
+ 
+        @include small-mobile {
+            font-size: 24px;
+        }
+    }
+}
+ 
+.industries-list {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
+    gap: 16px 40px;
+ 
+    @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, auto);
+        gap: 14px 20px;
+    }
+ 
+    @include small-mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+    }
+ 
+    li {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 15px;
+    }
+ 
+    img {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: $color-white;
+        box-shadow: $shadow-soft;
+    }
+}
+ 
+.projects {
+    background-color: $color-bg-gray;
+    @include section-padding;
+ 
+    .heading-2 {
+        font-size: 34px;
+        line-height: 1.3;
+ 
+        @include tablet {
+            font-size: 30px;
+        }
+ 
+        @include small-mobile {
+            font-size: 24px;
+        }
+    }
+ 
+    & > .text {
+        max-width: 540px;
+        font-size: 14px;
+    }
+}
+ 
+.projects-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+ 
+    @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+ 
+    .submit-button {
+        margin-left: auto;
+        flex-shrink: 0;
+        height: 44px;
+        padding: 0 24px;
+        font-size: 14px;
+        text-align: center;
+ 
+        @include mobile {
+            margin-left: 0;
+        }
+    }
+}
+ 
+.projects-names {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 32px;
+    font-size: 16px;
+ 
+    li {
+        padding: 6px 0;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+ 
+        &:first-child {
+            border-bottom-color: $color-blue;
+        }
+ 
+        &:hover {
+            color: $color-blue;
+        }
+    }
+}
+ 
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+ 
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+ 
+    .heading-3 {
+        margin-bottom: 24px;
+        font-size: 36px;
+ 
+        @include small-mobile {
+            font-size: 26px;
+        }
+    }
+ 
+    .text {
+        max-width: 540px;
+        margin-bottom: 24px;
+        font-size: 14px;
+    }
+}
+ 
+.project-image {
+    width: 100%;
+    height: auto;
+ 
+    @include mobile {
+        order: -1;
+    }
+}
+ 
+.project-tech {
+    margin: 0 0 24px;
+    font-size: 16px;
+    color: $color-gray;
+ 
+    .slash {
+        color: $color-blue;
+    }
+}
+ 
+.project-info {
+    @include reset-list;
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+    font-size: 14px;
+ 
+    li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+ 
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+ 
+.project-results {
+    @include reset-list;
+    display: flex;
+    gap: 48px;
+    margin-bottom: 32px;
+    font-size: 12px;
+    color: $color-gray;
+ 
+    strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 24px;
+        color: $color-text;
+    }
+}
+ 
+.project-stores {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+ 
+    img {
+        display: block;
+        height: 40px;
+        width: auto;
+    }
+}
+ 
+.discuss {
+    @include blue-section;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    @include section-padding;
+    @include bg-text("IT WEBSITE");
+ 
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+ 
+    .heading-2 {
+        font-size: 34px;
+        line-height: 1.4;
+ 
+        @include small-mobile {
+            font-size: 26px;
+        }
+    }
+ 
+    .text {
+        max-width: 380px;
+        font-size: 14px;
+        color: $color-white;
+    }
+}
+ 
+.discuss-form {
+    @include white-card;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 24px;
+    color: $color-text;
+ 
+    @include small-mobile {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+ 
+    .text {
+        max-width: none;
+        margin: 0;
+    }
+ 
+    label {
+        font-size: 12px;
+        color: $color-gray;
+    }
+ 
+    .form-input::placeholder {
+        color: $color-text;
+    }
+ 
+    .submit-button {
+        grid-column: 2;
+        justify-self: end;
+        height: 40px;
+        padding: 0 24px;
+        font-size: 14px;
+        text-align: center;
+ 
+        @include small-mobile {
+            grid-column: 1;
+            justify-self: start;
+        }
+    }
+}
+ 
+.stages {
+    @include section-padding;
+ 
+    .heading-2 {
+        margin-bottom: 30px;
+        font-size: 34px;
+ 
+        @include small-mobile {
+            font-size: 24px;
+        }
+    }
+}
+ 
+.stages-list {
+    @include reset-list;
+    counter-reset: stage;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 380px));
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    justify-content: space-between;
+    gap: 16px;
+ 
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+    }
+ 
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+    }
+ 
+    li {
+        @include white-card;
+        counter-increment: stage;
+        position: relative;
+        overflow: hidden;
+        padding: 22px;
+ 
+        &::after {
+            content: counter(stage);
+            position: absolute;
+            top: -20px;
+            right: 0;
+            font-size: 200px;
+            font-weight: 700;
+            line-height: 1;
+            color: $color-stage-number;
+ 
+            @include small-mobile {
+                font-size: 150px;
+            }
+        }
+ 
+        .stage-heading, .text {
+            position: relative;
+            z-index: 1;
+        }
+ 
+        .text {
+            margin: 0;
+            font-size: 13px;
+        }
+    }
+}
+ 
+.stage-heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+ 
+    img {
+        width: 44px;
+        height: 44px;
+    }
+ 
+    .heading-3 {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 500;
+    }
+}
+ 
+.team {
+    background-color: $color-bg-gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    @include section-padding;
+ 
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+ 
+    .heading-2 {
+        font-size: 34px;
+ 
+        @include small-mobile {
+            font-size: 26px;
+        }
+    }
+ 
+    .text {
+        font-size: 14px;
+    }
+}
+ 
+.team-numbers {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+    font-size: 14px;
+    color: $color-gray;
+ 
+    strong {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: $color-text;
+ 
+        @include tablet {
+            font-size: 36px;
+        }
+ 
+        @include small-mobile {
+            font-size: 26px;
+        }
+    }
+}
+ 
+.team-media {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+ 
+.book {
+    @include blue-section;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 550px) 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "title image"
+        "form  image";
+    gap: 30px 40px;
+    align-items: start;
+    @include section-padding;
+    @include bg-text("FREE BOOK");
+ 
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+ 
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "image"
+            "form";
+        grid-template-rows: auto;
+    }
+ 
+    .heading-2 {
+        grid-area: title;
+        margin: 0;
+        font-size: 34px;
+        line-height: 1.4;
+ 
+        @include small-mobile {
+            font-size: 26px;
+        }
+    }
+ 
+    img {
+        grid-area: image;
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+ 
+        @include mobile {
+            max-width: 240px;
+        }
+    }
+}
+ 
+.book-form {
+    @include white-card;
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 22px;
+    color: $color-text;
+ 
+    @include small-mobile {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+ 
+    .text {
+        margin: 0;
+ 
+        &:nth-of-type(3) {
+            grid-column: 1 / -1;
+        }
+    }
+ 
+    label {
+        font-size: 12px;
+        color: $color-gray;
+    }
+ 
+    .form-input::placeholder {
+        color: $color-text;
+    }
+ 
+    .submit-button {
+        grid-column: 2;
+        justify-self: end;
+        height: 38px;
+        padding: 0 22px;
+        font-size: 14px;
+        text-align: center;
+ 
+        @include small-mobile {
+            grid-column: 1;
+            justify-self: start;
+        }
+    }
+}
+ 
+.faq {
+    @include section-padding;
+}
+ 
+.faq-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+    align-items: start;
+ 
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+ 
+.faq-item {
+    border-bottom: 1px solid $color-hr;
+ 
+    .text, ul {
+        margin: 0 0 12px;
+        font-size: 14px;
+        color: $color-gray;
+    }
+ 
+    &[open] .faq-question::after {
+        transform: rotate(45deg);
+    }
+}
+ 
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+ 
+    &::-webkit-details-marker {
+        display: none;
+    }
+ 
+    &::after {
+        content: "+";
+        flex-shrink: 0;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1;
+        color: $color-blue;
+        transition: transform 0.2s;
+    }
+}
+ 
