@@ -1,17 +1,28 @@
 <!DOCTYPE html>
+ 
 <html lang="en">
  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Website</title>
+ 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+ 
     <link rel="stylesheet" href="src/assets/styles/style.css">
 </head>
  
 <body>
+ 
     <header class="header">
+ 
+        <button class="burger" type="button" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+ 
         <a class="logo" href="index.html">IT WEBSITE</a>
  
         <nav class="menu">
@@ -27,14 +38,16 @@
         <address class="header-contacts">
             <p><a href="tel:+77072548147">+7 (707) 254 81 47</a></p>
             <p><a href="tel:+77783959026">+7 (778) 395 90 26</a></p>
-            <p><a href="mailto:thousanditcompany@gmail.com">itcompany@mail.com</a></p>
+            <p><a href="mailto:itcompany@mail.com">itcompany@mail.com</a></p>
         </address>
     </header>
  
     <hr>
  
     <main>
+ 
         <section class="main-screen">
+ 
             <div class="main-screen-text">
                 <h1 class="heading-1">Development of <span class="accent">mobile applications</span> and <span
                         class="accent">web services</span> of any complexity</h1>
@@ -58,12 +71,32 @@
                 <button class="submit-button" type="submit">Get consultation</button>
             </form>
  
-            <img src="images/applications.png" alt="Mobile applications" width="300">
+            <div class="main-screen-images" aria-hidden="true">
+                <div class="images-inner">
+                    <div class="images-column column-up">
+                        <img src="images/phone-nike.png" alt="">
+                        <img src="images/phone-review.png" alt="">
+                        <img src="images/phone-chat.png" alt="">
+                        <img src="images/phone-nike.png" alt="">
+                        <img src="images/phone-review.png" alt="">
+                        <img src="images/phone-chat.png" alt="">
+                    </div>
+                    <div class="images-column column-down">
+                        <img src="images/phone-new-chat.png" alt="">
+                        <img src="images/phone-almaty.png" alt="">
+                        <img src="images/phone-settings.png" alt="">
+                        <img src="images/phone-new-chat.png" alt="">
+                        <img src="images/phone-almaty.png" alt="">
+                        <img src="images/phone-settings.png" alt="">
+                    </div>
+                </div>
+            </div>
         </section>
  
         <hr>
  
         <section class="services" id="services">
+ 
             <div class="services-text">
                 <h2 class="heading-2">Full development cycle</h2>
                 <p class="text">We use proven technologies</p>
